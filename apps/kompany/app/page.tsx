@@ -35,7 +35,7 @@ export default function ChatInterface() {
         ) : (
           agent.data.messages.map((message) => (
             <article key={message.id} className={`message ${message.role}`}>
-              <div className="role-label">{message.role === 'agent' ? 'Brain' : 'You'}</div>
+              <div className="role-label">{message.role === 'assistant' ? 'Brain' : 'You'}</div>
               {message.parts.map((part, index) =>
                 part.type === "text" ? <p key={index}>{part.text}</p> : null
               )}

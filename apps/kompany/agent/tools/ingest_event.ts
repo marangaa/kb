@@ -3,11 +3,11 @@ import { z } from "zod";
 import { logger } from "../lib/logger.js";
 
 export default defineTool({
-  description: "Ingest a new event or document into the Company Brain (GraphRAG) so it is remembered in the knowledge graph.",
+  description: "Ingest a new event or document into Kompany (GraphRAG) so it is remembered in the knowledge graph.",
   inputSchema: z.object({
     source: z.string().describe("The source of the event (e.g., 'slack', 'linear', 'notion', 'user')"),
     content: z.string().describe("The full text content of the event or document to ingest."),
-    metadata: z.record(z.any()).default({}).describe("Any additional metadata, e.g., author, channel, timestamp."),
+    metadata: z.record(z.string(), z.any()).default({}).describe("Any additional metadata, e.g., author, channel, timestamp."),
   }),
   async execute({ source, content, metadata }) {
     try {

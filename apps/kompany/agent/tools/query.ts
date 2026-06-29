@@ -2,7 +2,7 @@ import { defineTool } from "eve/tools";
 import { z } from "zod";
 
 export default defineTool({
-  description: "Query the Company Brain (GraphRAG) to retrieve organizational knowledge, decisions, or context. Use this to answer any question about the company.",
+  description: "Query Kompany (GraphRAG) to retrieve organizational knowledge, decisions, or context. Use this to answer any question about the company.",
   inputSchema: z.object({
     query: z.string().describe("The question or topic to search for in the knowledge graph."),
     mode: z.enum(["naive", "local", "global", "hybrid"]).default("hybrid").describe("The search mode. Hybrid is best for general questions. Global for high-level summaries. Local for specific entity details."),

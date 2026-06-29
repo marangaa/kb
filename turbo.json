@@ -4,6 +4,12 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
+      "env": [
+        "OPENAI_API_KEY",
+        "FIRECRAWL_API_KEY",
+        "VERCEL_OIDC_TOKEN",
+        "FF_CONNECT_ENABLED"
+      ],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": [".next/**", "!.next/cache/**", "!.next/dev/**"]
     },

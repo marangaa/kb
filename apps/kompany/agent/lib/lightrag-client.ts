@@ -1,20 +1,20 @@
-export async function queryCompanyBrain(query: string): Promise<string> {
+export async function queryKompany(query: string): Promise<string> {
   try {
-    const response = await fetch("http://localhost:9621/query", {
+    const response = await fetch("http://127.0.0.1:8020/query", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ query, mode: "hybrid" })
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ query }),
     });
-    
+
     if (!response.ok) {
-      console.warn(`LightRAG query failed: ${response.statusText}`);
-      return "No relevant context found in the Company Brain due to a connection error.";
+      return "No relevant context found in Kompany due to a connection error.";
     }
-    
+
     const data = await response.json();
-    return data.answer || "No relevant context found.";
-  } catch (err) {
-    console.error("Failed to query LightRAG:", err);
-    return "No relevant context found in the Company Brain due to a network error.";
+    return data.response || "No relevant context found.";
+  } catch (error) {
+    return "No relevant context found in Kompany due to a network error.";
   }
 }

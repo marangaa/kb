@@ -4,7 +4,7 @@ import { Firecrawl } from "firecrawl";
 import { logger } from "../lib/logger.js";
 
 export default defineTool({
-  description: "Scrape a given URL to extract information and automatically ingest it into the Company Brain (GraphRAG). Use this when you need to learn about a company, product, or person from their website.",
+  description: "Scrape a given URL to extract information and automatically ingest it into Kompany (GraphRAG). Use this when you need to learn about a company, product, or person from their website.",
   inputSchema: z.object({
     url: z.string().url().describe("The URL to scrape and ingest."),
   }),
@@ -21,35 +21,28 @@ export default defineTool({
          throw new Error("No markdown content returned from Firecrawl.");
       }
 
-      logger.info("Ingesting to GraphRAG backend...");
+      logger.info({ url, length: markdown.length }, "Scrape successful, sending to LightRAG");
 
-      // Ingest to LightRAG
-      const response = await fetch("http://127.0.0.1:8020/ingest", {
+      // Now we ingest it directly into GraphRAG
+      const ingestResponse = await fetch("http://127.0.0.1:8020/ingest", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          source: `firecrawl_scrape_${url}`,
+          source: url,
           content: markdown,
-          metadata: {
-            url: url,
-            scrapedAt: new Date().toISOString()
-          }
+          metadata: { type: "website_scrape", url }
         }),
       });
 
-      if (!response.ok) {
-        throw new Error(`Failed to ingest to GraphRAG: ${response.statusText}`);
+      if (!ingestResponse.ok) {
+         throw new Error(`LightRAG ingest failed: ${ingestResponse.statusText}`);
       }
-
-      const data = await response.json();
-      logger.info({ url }, "GraphRAG ingestion successful.");
       
+      logger.info({ url }, "Ingest successful");
       return { 
-        status: "success", 
-        message: `Successfully scraped ${url} and ingested into Company Brain.`,
-        graphrag_response: data 
+        success: true, 
+        message: `Successfully scraped ${url} and ingested into Kompany.`,
+        contentPreview: markdown.substring(0, 200) + "..."
       };
     } catch (error) {
       logger.error({ err: error, url }, "Scrape and ingest failed");
