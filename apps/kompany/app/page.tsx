@@ -5,6 +5,61 @@ import { useEffect, useRef } from "react";
 import GraphView from "./_components/graph-view";
 import "./globals.css";
 
+const parseInline = (text: string): React.ReactNode[] => {
+  const boldLinkRegex = /(\*\*.*?\*\*|\[.*?\]\(.*?\))/g;
+  const fragments = text.split(boldLinkRegex);
+  
+  return fragments.map((frag, idx) => {
+    if (frag.startsWith("**") && frag.endsWith("**")) {
+      return <strong key={idx}>{frag.slice(2, -2)}</strong>;
+    }
+    if (frag.startsWith("[") && frag.includes("](")) {
+      const closeBracketIdx = frag.indexOf("]");
+      const label = frag.slice(1, closeBracketIdx);
+      const url = frag.slice(closeBracketIdx + 2, -1);
+      return (
+        <a 
+          key={idx} 
+          href={url} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="markdown-link"
+        >
+          {label}
+        </a>
+      );
+    }
+    return frag;
+  });
+};
+
+const renderContent = (text: string) => {
+  return text.split("\n").map((line, lineIdx) => {
+    const trimmed = line.trim();
+    if (!trimmed) return <div key={lineIdx} style={{ height: "0.5rem" }} />;
+    
+    if (trimmed.startsWith("### ")) {
+      return <h3 key={lineIdx} className="markdown-h3">{parseInline(trimmed.substring(4))}</h3>;
+    }
+    if (trimmed.startsWith("## ")) {
+      return <h2 key={lineIdx} className="markdown-h2">{parseInline(trimmed.substring(3))}</h2>;
+    }
+    if (trimmed.startsWith("# ")) {
+      return <h1 key={lineIdx} className="markdown-h1">{parseInline(trimmed.substring(2))}</h1>;
+    }
+    
+    if (trimmed.startsWith("- ") || trimmed.startsWith("* ")) {
+      return (
+        <ul key={lineIdx} className="markdown-ul">
+          <li>{parseInline(trimmed.substring(2))}</li>
+        </ul>
+      );
+    }
+    
+    return <p key={lineIdx} className="markdown-p">{parseInline(line)}</p>;
+  });
+};
+
 /**
  * Company Brain Dashboard with Split Chat and Memory Graph View
  */
@@ -39,7 +94,11 @@ export default function ChatInterface() {
               <article key={message.id} className={`message ${message.role}`}>
                 <div className="role-label">{message.role === 'assistant' ? 'Brain' : 'You'}</div>
                 {message.parts.map((part, index) =>
-                  part.type === "text" ? <p key={index}>{part.text}</p> : null
+                  part.type === "text" ? (
+                    <div key={index} className="markdown-body">
+                      {renderContent(part.text)}
+                    </div>
+                  ) : null
                 )}
               </article>
             ))
