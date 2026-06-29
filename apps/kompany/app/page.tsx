@@ -75,6 +75,23 @@ export default function ChatInterface() {
     }
   }, [agent.data.messages]);
 
+  const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = async (e) => {
+      const content = String(e.target?.result || "");
+      if (content.trim()) {
+        const message = `Please ingest this document: ${file.name}\n\n${content}`;
+        void agent.send({ message });
+      }
+    };
+    reader.readAsText(file);
+    // Reset file input value
+    event.target.value = "";
+  };
+
   return (
     <main className="dashboard-layout">
       {/* Left Panel: Chat Interface */}
@@ -124,6 +141,27 @@ export default function ChatInterface() {
               }
             }}
           >
+            <label className="file-upload-label" title="Upload document (.txt, .md)">
+              <input
+                type="file"
+                accept=".txt,.md"
+                style={{ display: "none" }}
+                disabled={isBusy}
+                onChange={handleFileUpload}
+              />
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48" />
+              </svg>
+            </label>
             <input 
               name="message" 
               placeholder="Ask the Company Brain..." 
