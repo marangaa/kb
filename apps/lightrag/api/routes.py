@@ -37,3 +37,30 @@ async def query_brain(payload: QueryPayload):
         import traceback
         traceback.print_exc()
         raise HTTPException(status_code=500, detail=str(e))
+
+@router.get("/graph")
+async def get_graph():
+    try:
+        g = rag.chunk_entity_relation_graph
+        nodes = []
+        for node, data in g.nodes(data=True):
+            nodes.append({
+                "id": str(node),
+                "label": str(node),
+                "type": data.get("entity_type", "unknown"),
+                "description": data.get("description", "")
+            })
+        edges = []
+        for u, v, data in g.edges(data=True):
+            edges.append({
+                "source": str(u),
+                "target": str(v),
+                "description": data.get("description", ""),
+                "keywords": data.get("keywords", ""),
+                "weight": data.get("weight", 1.0)
+            })
+        return {"nodes": nodes, "edges": edges}
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        raise HTTPException(status_code=500, detail=str(e))
