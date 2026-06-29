@@ -79,10 +79,6 @@ export default function ChatInterface() {
     <main className="dashboard-layout">
       {/* Left Panel: Chat Interface */}
       <section className="chat-panel">
-        <header className="panel-header">
-          <h1>Company Brain</h1>
-        </header>
-
         <section className="chat-log" ref={logRef}>
           {agent.data.messages.length === 0 ? (
             <div className="empty-state">

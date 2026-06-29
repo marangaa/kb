@@ -235,14 +235,10 @@ export default function GraphView() {
 
   return (
     <div className="graph-container">
-      <div className="graph-header">
-        <h2>Organizational Memory Graph</h2>
-        <button onClick={fetchGraphData} className="refresh-btn" title="Sync memory graph">
+      <div className="graph-canvas-wrapper" onMouseUp={handleDragEnd} onMouseLeave={handleDragEnd}>
+        <button onClick={fetchGraphData} className="floating-sync-btn" title="Sync memory graph">
           Sync Graph
         </button>
-      </div>
-
-      <div className="graph-canvas-wrapper" onMouseUp={handleDragEnd} onMouseLeave={handleDragEnd}>
         <svg
           ref={svgRef}
           width="100%"
