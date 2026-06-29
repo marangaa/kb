@@ -1,3 +1,4 @@
+import asyncio
 from fastapi import APIRouter, HTTPException
 from core.config import rag
 from api.schemas import IngestPayload, QueryPayload
@@ -12,11 +13,16 @@ async def ingest_event(payload: IngestPayload):
     We append the metadata to the text so the LLM extracts it correctly into the Knowledge Graph.
     """
     formatted_text = f"[Source: {payload.source}]\n{payload.content}\n[Metadata: {payload.metadata}]"
-    try:
-        await rag.ainsert(formatted_text)
-        return {"status": "success", "message": "Event ingested and graph updated."}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+    
+    async def run_insert():
+        try:
+            await rag.ainsert(formatted_text)
+        except Exception as e:
+            import logging
+            logging.error(f"Background ingest failed: {e}", exc_info=True)
+            
+    asyncio.create_task(run_insert())
+    return {"status": "success", "message": "Event ingestion started in the background."}
 
 @router.post("/query")
 async def query_brain(payload: QueryPayload):
