@@ -18,14 +18,23 @@ db_port = int(os.environ.get("POSTGRES_PORT", 5432))
 db_user = os.environ.get("POSTGRES_USER", "postgres")
 
 if not db_password:
-    client = boto3.client('rds', region_name=aws_region)
-    auth_token = client.generate_db_auth_token(
-        DBHostname=db_host, 
-        Port=db_port, 
-        DBUsername=db_user, 
-        Region=aws_region
-    )
-    os.environ["POSTGRES_PASSWORD"] = auth_token
+    try:
+        client = boto3.client('rds', region_name=aws_region)
+        auth_token = client.generate_db_auth_token(
+            DBHostname=db_host, 
+            Port=db_port, 
+            DBUsername=db_user, 
+            Region=aws_region
+        )
+        os.environ["POSTGRES_PASSWORD"] = auth_token
+    except Exception as e:
+        import logging
+        logging.error(
+            "AWS CREDENTIALS EXPIRED OR MISSING! "
+            "Please reauthenticate your AWS SSO session in your terminal by running: aws sso login"
+        )
+        # Set a placeholder so startup doesn't fail on missing password
+        os.environ["POSTGRES_PASSWORD"] = "aws_sso_refresh_required"
 
 # AWS Aurora IAM auth requires SSL
 os.environ["POSTGRES_SSL_MODE"] = "require"
