@@ -47,26 +47,39 @@ body {
 
 .dashboard-layout {
   display: grid;
-  grid-template-columns: 460px 1fr;
+  grid-template-columns: 35% 65%;
   height: 100dvh;
   width: 100vw;
   overflow: hidden;
-  background-color: var(--bg-color);
+  background-color: #030303;
+  /* Glowing grid and dot background */
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(56, 189, 248, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(236, 72, 153, 0.05) 0%, transparent 40%),
+    radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 24px 24px;
+  padding: 1rem;
+  gap: 1rem;
 }
 
 .chat-panel {
   display: flex;
   flex-direction: column;
   height: 100%;
-  border-right: 1px solid var(--border-color);
+  border: 1px solid var(--border-color);
+  border-radius: 1.25rem;
   position: relative;
-  background-color: rgba(10, 10, 10, 0.4);
+  background-color: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  overflow: hidden;
 }
 
 .panel-header {
-  padding: 1.5rem;
+  padding: 1.25rem 1.5rem;
   border-bottom: 1px solid var(--border-color);
-  background: rgba(5, 5, 5, 0.8);
+  background: rgba(15, 15, 15, 0.6);
   backdrop-filter: blur(12px);
   height: 60px;
   display: flex;
@@ -74,7 +87,7 @@ body {
 }
 
 .panel-header h1 {
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -86,7 +99,12 @@ body {
   height: 100%;
   position: relative;
   overflow: hidden;
-  background-color: #030303;
+  border: 1px solid var(--border-color);
+  border-radius: 1.25rem;
+  background-color: rgba(8, 8, 8, 0.75);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.03);
 }
 
 .chat-log {
@@ -448,4 +466,61 @@ body {
   font-size: 0.85rem;
   line-height: 1.5;
   color: var(--text-secondary);
+}
+
+/* Custom Markdown Rendering Styles */
+.markdown-body {
+  width: 100%;
+}
+
+.markdown-h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 1.25rem 0 0.5rem 0;
+  color: var(--text-primary);
+}
+
+.markdown-h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.6rem 0;
+  color: var(--text-primary);
+}
+
+.markdown-h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 1.75rem 0 0.75rem 0;
+  color: var(--text-primary);
+}
+
+.markdown-ul {
+  margin: 0.5rem 0;
+  padding-left: 1.25rem;
+  list-style-type: disc;
+}
+
+.markdown-ul li {
+  line-height: 1.6;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.markdown-p {
+  margin: 0.75rem 0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.markdown-link {
+  color: #38bdf8; /* sky blue accent */
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.markdown-link:hover {
+  opacity: 0.8;
 }
