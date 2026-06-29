@@ -38,8 +38,9 @@ This document compiles all details and copy-paste descriptions needed for the **
 ## 3. Recommended Showcase / Demo Flow
 
 1.  **Start fresh:** Boot the application at `http://localhost:3000`. You will see an empty chat state and a small starter graph representing early scraped info.
-2.  **Ask a Question:** Ask the brain: `"What is Fasihi and what products do we build?"`
-3.  **Upload Documents:** Click the paperclip button on the left of the input bar and upload `docs/studio/team.md` (or `about.md`).
-4.  **Watch the Ingestion:** Point out the loader pulse. The backend will parse the uploaded file, run entity-relation extraction, and add nodes like `Richard (Studio Lead)`, `Sarah (Engineering Lead)`, and `Nairobi` to the database.
-5.  **Real-time Graph Sync:** Watch the right-hand canvas automatically update and link the new nodes to the central `Fasihi` node!
-6.  **Interactive Selection:** Hover over or click on any node to view its detailed relationship card.
+2.  **Ask a Question:** Ask the brain: `"What is Fasihi?"`
+3.  **Upload Documents:** Click the paperclip button and upload Fasihi documents (`docs/studio/about.md`, `team.md`, `products.md`, `clients.md`, `tech_stack.md`).
+4.  **Watch the Ingestion:** Note the loader pulse. The backend parses each file, runs entity-relation extraction, and writes nodes (like `Safaricom`, `Next.js`, `Amina`, `Voiant`) to the AWS database.
+5.  **Real-time Graph Sync:** Click **Sync Graph** and watch the right-hand canvas dynamically expand, linking Safaricom to FinnPesa, Kenya Airways to Voiant, and Next.js to James.
+6.  **Multi-Document Query:** Ask the brain: `"Which Fasihi products use Safaricom integrations, who leads that relationship, and what backend database do they run on?"`
+7.  **Interactive Selection:** Hover over or click on any node to view its detailed relationship card.

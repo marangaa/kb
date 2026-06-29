@@ -84,11 +84,20 @@ Use this structured script to record your video demo or showcase the system's li
 3. *Verify:* Product nodes like `Voiant`, `Resonate`, `Qualra`, and `FinnPesa` will appear. 
 4. Notice that `Sarah` automatically connects to `Voiant` because the document noted her leadership on the voice suite.
 
-### Step 5: Query the Brain
-In the chat input bar, ask the brain:
-> `"Who is James and what is he working on in Nairobi?"`
+### Step 5: Connect Partnerships & Tech (Ingest clients.md & tech_stack.md)
+1. Upload `docs/studio/clients.md` to add partnerships with `Safaricom`, `Nairobi County`, and `Kenya Airways`.
+2. Upload `docs/studio/tech_stack.md` to map technology choices like `Next.js`, `FastAPI`, `EVE`, and `AWS Aurora PostgreSQL`.
+3. Sync the graph.
+4. *Verify:* New partnership and technology clusters appear, linking Safaricom to FinnPesa, Kenya Airways to Voiant, and Next.js to James.
 
-*Expected Answer:* The brain will reason across the ingested `team.md` and `about.md` nodes and return a markdown-formatted response explaining that James is a Frontend Engineer in Nairobi leading visual design systems, React layout implementation, and SVG visualizations.
+### Step 6: Query the Unified Brain
+In the chat input bar, ask the brain:
+> `"Which Fasihi products use Safaricom integrations, who leads that client relationship, and what databases are used on the backend?"`
+
+*Expected Answer:* The brain will perform hybrid GraphRAG queries across the ingested `products.md`, `clients.md`, and `tech_stack.md` documents to return a comprehensive response:
+1.  **Product:** FinnPesa.
+2.  **Lead:** Sarah.
+3.  **Database:** AWS Aurora PostgreSQL (with pgvector).
 
 ---
 
