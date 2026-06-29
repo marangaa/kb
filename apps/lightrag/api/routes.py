@@ -41,7 +41,7 @@ async def query_brain(payload: QueryPayload):
 @router.get("/graph")
 async def get_graph():
     try:
-        g = rag.chunk_entity_relation_graph
+        g = rag.chunk_entity_relation_graph._graph
         nodes = []
         for node, data in g.nodes(data=True):
             nodes.append({
