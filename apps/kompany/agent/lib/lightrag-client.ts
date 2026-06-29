@@ -13,7 +13,7 @@ export async function queryKompany(query: string): Promise<string> {
     }
 
     const data = await response.json();
-    return data.response || "No relevant context found.";
+    return data.answer || "No relevant context found.";
   } catch (error) {
     return "No relevant context found in Kompany due to a network error.";
   }
