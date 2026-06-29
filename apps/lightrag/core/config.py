@@ -28,13 +28,11 @@ if not db_password:
         )
         os.environ["POSTGRES_PASSWORD"] = auth_token
     except Exception as e:
-        import sys
-        print("\n" + "="*80)
-        print("  AWS CREDENTIALS EXPIRED OR MISSING!")
-        print("  Please run the following command in your terminal to reauthenticate:")
-        print("\n      aws sso login\n")
-        print("="*80 + "\n")
-        sys.exit(1)
+        import logging
+        logging.error("AWS RDS IAM Token Generation Failed: AWS credentials are expired or missing.")
+        raise RuntimeError(
+            "AWS credentials expired or missing. Please run 'aws sso login' in your terminal."
+        ) from e
 
 # AWS Aurora IAM auth requires SSL
 os.environ["POSTGRES_SSL_MODE"] = "require"
