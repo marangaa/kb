@@ -236,3 +236,43 @@ body {
   max-width: 400px;
   line-height: 1.5;
 }
+
+/* Loader / Thinking state */
+.loader-dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: var(--user-msg-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  width: fit-content;
+}
+
+.loader-dots span {
+  width: 6px;
+  height: 6px;
+  background-color: var(--text-primary);
+  border-radius: 50%;
+  display: inline-block;
+  animation: pulse 1.4s infinite ease-in-out both;
+}
+
+.loader-dots span:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.loader-dots span:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes pulse {
+  0%, 80%, 100% { 
+    transform: scale(0.6);
+    opacity: 0.3;
+  } 
+  40% { 
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}

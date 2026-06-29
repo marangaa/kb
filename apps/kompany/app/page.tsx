@@ -42,6 +42,16 @@ export default function ChatInterface() {
             </article>
           ))
         )}
+        {isBusy && (
+          <article className="message agent">
+            <div className="role-label" style={{ display: "block" }}>Brain</div>
+            <div className="loader-dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </article>
+        )}
       </section>
 
       <div className="form-wrapper">
