@@ -1,6 +1,7 @@
 export async function queryKompany(query: string): Promise<string> {
   try {
-    const response = await fetch("http://127.0.0.1:8020/query", {
+    const baseUrl = process.env.LIGHTRAG_API_URL || "http://127.0.0.1:8020";
+    const response = await fetch(`${baseUrl}/query`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -1,6 +1,7 @@
 export async function GET() {
   try {
-    const res = await fetch("http://127.0.0.1:8020/graph");
+    const baseUrl = process.env.LIGHTRAG_API_URL || "http://127.0.0.1:8020";
+    const res = await fetch(`${baseUrl}/graph`);
     if (!res.ok) {
       throw new Error(`Failed to fetch graph from backend: ${res.statusText}`);
     }

@@ -19,6 +19,11 @@ db_user = os.environ.get("POSTGRES_USER", "postgres")
 
 if not db_password:
     try:
+        import logging
+        key_id = os.environ.get("AWS_ACCESS_KEY_ID", "")
+        masked_key = f"{key_id[:5]}...{key_id[-4:]}" if len(key_id) > 8 else "None"
+        logging.info(f"Generating dynamic RDS IAM token using AWS Access Key: {masked_key}")
+        
         client = boto3.client('rds', region_name=aws_region)
         auth_token = client.generate_db_auth_token(
             DBHostname=db_host, 
