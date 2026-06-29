@@ -12,6 +12,7 @@ dependencies = [
     "asyncpg",
     "psycopg[binary]",
     "boto3",
+    "botocore[crt]",
     "ollama>=0.6.2",
     "pgvector>=0.4.2",
 ]

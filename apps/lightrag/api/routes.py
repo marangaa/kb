@@ -25,7 +25,7 @@ async def query_brain(payload: QueryPayload):
     """
     try:
         param = QueryParam(mode=payload.mode)
-        result = await rag.aquery(payload.query, param_or_dict=param)
+        result = await rag.aquery(payload.query, param=param)
         return {"answer": result}
     except Exception as e:
         import traceback
