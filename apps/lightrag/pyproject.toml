@@ -1,0 +1,17 @@
+[project]
+name = "lightrag"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "lightrag-hku[api]",
+    "fastapi",
+    "uvicorn",
+    "pydantic",
+    "asyncpg",
+    "psycopg[binary]",
+    "boto3",
+    "ollama>=0.6.2",
+    "pgvector>=0.4.2",
+]

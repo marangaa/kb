@@ -1,0 +1,316 @@
+2026-06-29 10:13:24,773 - lightrag - INFO - Ollama LLM Options: {}
+2026-06-29 10:13:24,792 - lightrag - INFO - Ollama Embedding Options: {}
+2026-06-29 10:13:25,227 - lightrag - WARNING - Could not import provider function for ollama: No module named 'ollama'
+2026-06-29 10:13:25,230 - lightrag - INFO - Embedding config: binding=ollama model=None embedding_dim=None max_token_size=None
+2026-06-29 10:13:25,231 - lightrag - INFO - Send embedding dimension: False by env var (dimensions=None, has_param=True, binding=ollama)
+2026-06-29 10:13:25,233 - lightrag - INFO - Embedding max_token_size: None (Embedding token limit is disabled).
+2026-06-29 10:13:25,243 - lightrag - INFO - Reranking is disabled
+2026-06-29 10:13:59,715 - lightrag - INFO - Ollama LLM Options: {}
+2026-06-29 10:13:59,724 - lightrag - INFO - Ollama Embedding Options: {}
+2026-06-29 10:13:59,931 - lightrag - WARNING - Could not import provider function for ollama: No module named 'ollama'
+2026-06-29 10:13:59,931 - lightrag - INFO - Embedding config: binding=ollama model=None embedding_dim=None max_token_size=None
+2026-06-29 10:13:59,931 - lightrag - INFO - Send embedding dimension: False by env var (dimensions=None, has_param=True, binding=ollama)
+2026-06-29 10:13:59,932 - lightrag - INFO - Embedding max_token_size: None (Embedding token limit is disabled).
+2026-06-29 10:13:59,932 - lightrag - INFO - Reranking is disabled
+2026-06-29 10:17:42,863 - lightrag - INFO - Ollama LLM Options: {}
+2026-06-29 10:17:42,864 - lightrag - INFO - Ollama Embedding Options: {}
+2026-06-29 10:17:45,817 - lightrag - INFO - Embedding config: binding=ollama model=None embedding_dim=1024 max_token_size=8192
+2026-06-29 10:17:45,817 - lightrag - INFO - Send embedding dimension: False by env var (dimensions=1024, has_param=True, binding=ollama)
+2026-06-29 10:17:45,818 - lightrag - INFO - Embedding max_token_size: 8192 (from ollama provider default)
+2026-06-29 10:17:45,818 - lightrag - INFO - Reranking is disabled
+2026-06-29 10:17:56,779 - lightrag - INFO - [] Created new empty graph file: C:\Users\rchdm\Desktop\kb\apps\lightrag\rag_storage\graph_chunk_entity_relation.graphml
+2026-06-29 10:17:56,815 - lightrag - INFO - Role LLM Configuration (initialized):
+2026-06-29 10:17:56,816 - lightrag - INFO -  - extract: ollama/mistral-nemo:latest, host=http://localhost:11434, max_async=4, timeout=240
+2026-06-29 10:17:56,816 - lightrag - INFO -  - keyword: ollama/mistral-nemo:latest, host=http://localhost:11434, max_async=4, timeout=240
+2026-06-29 10:17:56,818 - lightrag - INFO -  - query: ollama/mistral-nemo:latest, host=http://localhost:11434, max_async=4, timeout=240
+2026-06-29 10:17:56,818 - lightrag - INFO -  - vlm: ollama/mistral-nemo:latest, host=http://localhost:11434, max_async=4, timeout=240
+2026-06-29 10:17:56,819 - lightrag - INFO - Role LLM Option:
+2026-06-29 10:17:56,820 - lightrag - INFO -  - extract: Ollama {}
+2026-06-29 10:17:56,826 - lightrag - INFO -  - keyword: Ollama {}
+2026-06-29 10:17:56,826 - lightrag - INFO -  - query: Ollama {}
+2026-06-29 10:17:56,827 - lightrag - INFO -  - vlm: Ollama {}
+2026-06-29 10:17:57,025 - lightrag - INFO - WebUI assets mounted at /webui
+2026-06-29 10:17:57,677 - uvicorn.error - INFO - Started server process [30316]
+2026-06-29 10:17:57,780 - uvicorn.error - INFO - Waiting for application startup.
+2026-06-29 10:17:57,812 - lightrag - INFO - [] Process 30316 KV load full_docs with 0 records
+2026-06-29 10:17:57,819 - lightrag - INFO - [] Process 30316 KV load text_chunks with 0 records
+2026-06-29 10:17:57,835 - lightrag - INFO - [] Process 30316 KV load full_entities with 0 records
+2026-06-29 10:17:57,844 - lightrag - INFO - [] Process 30316 KV load full_relations with 0 records
+2026-06-29 10:17:57,883 - lightrag - INFO - [] Process 30316 KV load entity_chunks with 0 records
+2026-06-29 10:17:57,901 - lightrag - INFO - [] Process 30316 KV load relation_chunks with 0 records
+2026-06-29 10:17:57,921 - lightrag - INFO - [] Process 30316 KV load llm_response_cache with 0 records
+2026-06-29 10:17:57,936 - lightrag - INFO - [] Process 30316 doc status load doc_status with 0 records
+2026-06-29 10:17:57,952 - uvicorn.error - INFO - Application startup complete.
+2026-06-29 10:17:57,954 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:9621 (Press CTRL+C to quit)
+2026-06-29 10:19:41,195 - uvicorn.error - INFO - Shutting down
+2026-06-29 10:19:41,304 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-06-29 10:19:41,305 - lightrag - INFO - Successfully finalized 12 storages
+2026-06-29 10:19:41,306 - uvicorn.error - INFO - Application shutdown complete.
+2026-06-29 10:19:41,306 - uvicorn.error - INFO - Finished server process [30316]
+2026-06-29 10:20:05,498 - lightrag - INFO - Ollama LLM Options: {}
+2026-06-29 10:20:05,499 - lightrag - INFO - Ollama Embedding Options: {}
+2026-06-29 10:20:06,930 - lightrag - INFO - Embedding config: binding=ollama model=None embedding_dim=1024 max_token_size=8192
+2026-06-29 10:20:06,930 - lightrag - INFO - Send embedding dimension: False by env var (dimensions=1024, has_param=True, binding=ollama)
+2026-06-29 10:20:06,931 - lightrag - INFO - Embedding max_token_size: 8192 (from ollama provider default)
+2026-06-29 10:20:06,932 - lightrag - INFO - Reranking is disabled
+2026-06-29 10:20:08,539 - lightrag - INFO - [] Created new empty graph file: C:\Users\rchdm\Desktop\kb\apps\lightrag\rag_storage\graph_chunk_entity_relation.graphml
+2026-06-29 10:20:08,552 - lightrag - INFO - Role LLM Configuration (initialized):
+2026-06-29 10:20:08,557 - lightrag - INFO -  - extract: ollama/mistral-nemo:latest, host=http://localhost:11434, max_async=4, timeout=240
+2026-06-29 10:20:08,560 - lightrag - INFO -  - keyword: ollama/mistral-nemo:latest, host=http://localhost:11434, max_async=4, timeout=240
+2026-06-29 10:20:08,580 - lightrag - INFO -  - query: ollama/mistral-nemo:latest, host=http://localhost:11434, max_async=4, timeout=240
+2026-06-29 10:20:08,602 - lightrag - INFO -  - vlm: ollama/mistral-nemo:latest, host=http://localhost:11434, max_async=4, timeout=240
+2026-06-29 10:20:08,622 - lightrag - INFO - Role LLM Option:
+2026-06-29 10:20:08,659 - lightrag - INFO -  - extract: Ollama {}
+2026-06-29 10:20:08,676 - lightrag - INFO -  - keyword: Ollama {}
+2026-06-29 10:20:08,693 - lightrag - INFO -  - query: Ollama {}
+2026-06-29 10:20:08,712 - lightrag - INFO -  - vlm: Ollama {}
+2026-06-29 10:20:08,902 - lightrag - INFO - WebUI assets mounted at /webui
+2026-06-29 10:20:09,012 - uvicorn.error - INFO - Started server process [13720]
+2026-06-29 10:20:09,022 - uvicorn.error - INFO - Waiting for application startup.
+2026-06-29 10:20:09,045 - lightrag - INFO - [] Process 13720 KV load full_docs with 0 records
+2026-06-29 10:20:09,059 - lightrag - INFO - [] Process 13720 KV load text_chunks with 0 records
+2026-06-29 10:20:09,086 - lightrag - INFO - [] Process 13720 KV load full_entities with 0 records
+2026-06-29 10:20:09,108 - lightrag - INFO - [] Process 13720 KV load full_relations with 0 records
+2026-06-29 10:20:09,117 - lightrag - INFO - [] Process 13720 KV load entity_chunks with 0 records
+2026-06-29 10:20:09,144 - lightrag - INFO - [] Process 13720 KV load relation_chunks with 0 records
+2026-06-29 10:20:09,151 - lightrag - INFO - [] Process 13720 KV load llm_response_cache with 0 records
+2026-06-29 10:20:09,159 - lightrag - INFO - [] Process 13720 doc status load doc_status with 0 records
+2026-06-29 10:20:09,181 - uvicorn.error - INFO - Application startup complete.
+2026-06-29 10:20:09,230 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:9621 (Press CTRL+C to quit)
+2026-06-29 10:20:28,779 - uvicorn.error - INFO - Shutting down
+2026-06-29 10:20:28,901 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-06-29 10:20:28,906 - lightrag - INFO - Successfully finalized 12 storages
+2026-06-29 10:20:28,909 - uvicorn.error - INFO - Application shutdown complete.
+2026-06-29 10:20:28,914 - uvicorn.error - INFO - Finished server process [13720]
+2026-06-29 10:35:40,704 - lightrag - INFO - Ollama LLM Options: {}
+2026-06-29 10:35:40,707 - lightrag - INFO - Ollama Embedding Options: {}
+2026-06-29 10:35:42,043 - lightrag - INFO - Embedding config: binding=ollama model=None embedding_dim=1024 max_token_size=8192
+2026-06-29 10:35:42,044 - lightrag - INFO - Send embedding dimension: False by env var (dimensions=1024, has_param=True, binding=ollama)
+2026-06-29 10:35:42,046 - lightrag - INFO - Embedding max_token_size: 8192 (from ollama provider default)
+2026-06-29 10:35:42,049 - lightrag - INFO - Reranking is disabled
+2026-06-29 10:35:43,800 - lightrag - INFO - [] Created new empty graph file: C:\Users\rchdm\Desktop\kb\apps\lightrag\rag_storage\graph_chunk_entity_relation.graphml
+2026-06-29 10:35:43,819 - lightrag - INFO - Role LLM Configuration (initialized):
+2026-06-29 10:35:43,835 - lightrag - INFO -  - extract: ollama/mistral-nemo:latest, host=http://localhost:11434, max_async=4, timeout=240
+2026-06-29 10:35:43,848 - lightrag - INFO -  - keyword: ollama/mistral-nemo:latest, host=http://localhost:11434, max_async=4, timeout=240
+2026-06-29 10:35:43,855 - lightrag - INFO -  - query: ollama/mistral-nemo:latest, host=http://localhost:11434, max_async=4, timeout=240
+2026-06-29 10:35:43,863 - lightrag - INFO -  - vlm: ollama/mistral-nemo:latest, host=http://localhost:11434, max_async=4, timeout=240
+2026-06-29 10:35:43,865 - lightrag - INFO - Role LLM Option:
+2026-06-29 10:35:43,895 - lightrag - INFO -  - extract: Ollama {}
+2026-06-29 10:35:43,934 - lightrag - INFO -  - keyword: Ollama {}
+2026-06-29 10:35:43,966 - lightrag - INFO -  - query: Ollama {}
+2026-06-29 10:35:43,989 - lightrag - INFO -  - vlm: Ollama {}
+2026-06-29 10:35:44,190 - lightrag - INFO - WebUI assets mounted at /webui
+2026-06-29 10:35:44,295 - uvicorn.error - INFO - Started server process [5292]
+2026-06-29 10:35:44,299 - uvicorn.error - INFO - Waiting for application startup.
+2026-06-29 10:35:44,304 - lightrag - INFO - [] Process 5292 KV load full_docs with 0 records
+2026-06-29 10:35:44,314 - lightrag - INFO - [] Process 5292 KV load text_chunks with 0 records
+2026-06-29 10:35:44,324 - lightrag - INFO - [] Process 5292 KV load full_entities with 0 records
+2026-06-29 10:35:44,334 - lightrag - INFO - [] Process 5292 KV load full_relations with 0 records
+2026-06-29 10:35:44,339 - lightrag - INFO - [] Process 5292 KV load entity_chunks with 0 records
+2026-06-29 10:35:44,340 - lightrag - INFO - [] Process 5292 KV load relation_chunks with 0 records
+2026-06-29 10:35:44,341 - lightrag - INFO - [] Process 5292 KV load llm_response_cache with 0 records
+2026-06-29 10:35:44,343 - lightrag - INFO - [] Process 5292 doc status load doc_status with 0 records
+2026-06-29 10:35:44,344 - uvicorn.error - INFO - Application startup complete.
+2026-06-29 10:35:44,346 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:9621 (Press CTRL+C to quit)
+2026-06-29 10:37:57,393 - lightrag - INFO - Ollama LLM Options: {}
+2026-06-29 10:37:57,393 - lightrag - INFO - Ollama Embedding Options: {}
+2026-06-29 10:37:58,621 - lightrag - INFO - Embedding config: binding=ollama model=None embedding_dim=1024 max_token_size=8192
+2026-06-29 10:37:58,622 - lightrag - INFO - Send embedding dimension: False by env var (dimensions=1024, has_param=True, binding=ollama)
+2026-06-29 10:37:58,623 - lightrag - INFO - Embedding max_token_size: 8192 (from ollama provider default)
+2026-06-29 10:37:58,623 - lightrag - INFO - Reranking is disabled
+2026-06-29 10:38:00,596 - lightrag - INFO - [] Created new empty graph file: C:\Users\rchdm\Desktop\kb\apps\lightrag\rag_storage\graph_chunk_entity_relation.graphml
+2026-06-29 10:38:00,614 - lightrag - INFO - Role LLM Configuration (initialized):
+2026-06-29 10:38:00,634 - lightrag - INFO -  - extract: ollama/mistral-nemo:latest, host=http://localhost:11434, max_async=4, timeout=240
+2026-06-29 10:38:00,646 - lightrag - INFO -  - keyword: ollama/mistral-nemo:latest, host=http://localhost:11434, max_async=4, timeout=240
+2026-06-29 10:38:00,652 - lightrag - INFO -  - query: ollama/mistral-nemo:latest, host=http://localhost:11434, max_async=4, timeout=240
+2026-06-29 10:38:00,655 - lightrag - INFO -  - vlm: ollama/mistral-nemo:latest, host=http://localhost:11434, max_async=4, timeout=240
+2026-06-29 10:38:00,678 - lightrag - INFO - Role LLM Option:
+2026-06-29 10:38:00,705 - lightrag - INFO -  - extract: Ollama {}
+2026-06-29 10:38:00,727 - lightrag - INFO -  - keyword: Ollama {}
+2026-06-29 10:38:00,743 - lightrag - INFO -  - query: Ollama {}
+2026-06-29 10:38:00,753 - lightrag - INFO -  - vlm: Ollama {}
+2026-06-29 10:38:00,999 - lightrag - INFO - WebUI assets mounted at /webui
+2026-06-29 10:38:01,185 - uvicorn.error - INFO - Started server process [14896]
+2026-06-29 10:38:01,188 - uvicorn.error - INFO - Waiting for application startup.
+2026-06-29 10:38:01,192 - lightrag - INFO - [] Process 14896 KV load full_docs with 0 records
+2026-06-29 10:38:01,215 - lightrag - INFO - [] Process 14896 KV load text_chunks with 0 records
+2026-06-29 10:38:01,221 - lightrag - INFO - [] Process 14896 KV load full_entities with 0 records
+2026-06-29 10:38:01,227 - lightrag - INFO - [] Process 14896 KV load full_relations with 0 records
+2026-06-29 10:38:01,246 - lightrag - INFO - [] Process 14896 KV load entity_chunks with 0 records
+2026-06-29 10:38:01,271 - lightrag - INFO - [] Process 14896 KV load relation_chunks with 0 records
+2026-06-29 10:38:01,286 - lightrag - INFO - [] Process 14896 KV load llm_response_cache with 0 records
+2026-06-29 10:38:01,296 - lightrag - INFO - [] Process 14896 doc status load doc_status with 0 records
+2026-06-29 10:38:01,353 - uvicorn.error - INFO - Application startup complete.
+2026-06-29 10:38:01,363 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:9621 (Press CTRL+C to quit)
+2026-06-29 10:38:24,661 - uvicorn.error - INFO - Shutting down
+2026-06-29 10:38:24,774 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-06-29 10:38:24,779 - lightrag - INFO - Successfully finalized 12 storages
+2026-06-29 10:38:24,801 - uvicorn.error - INFO - Application shutdown complete.
+2026-06-29 10:38:24,807 - uvicorn.error - INFO - Finished server process [14896]
+2026-06-29 10:40:56,777 - lightrag - INFO - Ollama LLM Options: {}
+2026-06-29 10:40:56,779 - lightrag - INFO - Ollama Embedding Options: {}
+2026-06-29 10:40:58,266 - lightrag - INFO - Embedding config: binding=ollama model=None embedding_dim=1024 max_token_size=8192
+2026-06-29 10:40:58,267 - lightrag - INFO - Send embedding dimension: False by env var (dimensions=1024, has_param=True, binding=ollama)
+2026-06-29 10:40:58,268 - lightrag - INFO - Embedding max_token_size: 8192 (from ollama provider default)
+2026-06-29 10:40:58,268 - lightrag - INFO - Reranking is disabled
+2026-06-29 10:41:00,133 - lightrag - INFO - [] Created new empty graph file: C:\Users\rchdm\Desktop\kb\apps\lightrag\rag_storage\graph_chunk_entity_relation.graphml
+2026-06-29 10:41:00,157 - lightrag - INFO - Role LLM Configuration (initialized):
+2026-06-29 10:41:00,177 - lightrag - INFO -  - extract: ollama/mistral-nemo:latest, host=http://localhost:11434, max_async=4, timeout=240
+2026-06-29 10:41:00,177 - lightrag - INFO -  - keyword: ollama/mistral-nemo:latest, host=http://localhost:11434, max_async=4, timeout=240
+2026-06-29 10:41:00,178 - lightrag - INFO -  - query: ollama/mistral-nemo:latest, host=http://localhost:11434, max_async=4, timeout=240
+2026-06-29 10:41:00,178 - lightrag - INFO -  - vlm: ollama/mistral-nemo:latest, host=http://localhost:11434, max_async=4, timeout=240
+2026-06-29 10:41:00,201 - lightrag - INFO - Role LLM Option:
+2026-06-29 10:41:00,218 - lightrag - INFO -  - extract: Ollama {}
+2026-06-29 10:41:00,233 - lightrag - INFO -  - keyword: Ollama {}
+2026-06-29 10:41:00,237 - lightrag - INFO -  - query: Ollama {}
+2026-06-29 10:41:00,241 - lightrag - INFO -  - vlm: Ollama {}
+2026-06-29 10:41:00,451 - lightrag - INFO - WebUI assets mounted at /webui
+2026-06-29 10:41:00,663 - uvicorn.error - INFO - Started server process [10444]
+2026-06-29 10:41:00,688 - uvicorn.error - INFO - Waiting for application startup.
+2026-06-29 10:41:00,717 - lightrag - INFO - [] Process 10444 KV load full_docs with 0 records
+2026-06-29 10:41:00,736 - lightrag - INFO - [] Process 10444 KV load text_chunks with 0 records
+2026-06-29 10:41:00,779 - lightrag - INFO - [] Process 10444 KV load full_entities with 0 records
+2026-06-29 10:41:00,799 - lightrag - INFO - [] Process 10444 KV load full_relations with 0 records
+2026-06-29 10:41:00,826 - lightrag - INFO - [] Process 10444 KV load entity_chunks with 0 records
+2026-06-29 10:41:00,842 - lightrag - INFO - [] Process 10444 KV load relation_chunks with 0 records
+2026-06-29 10:41:00,866 - lightrag - INFO - [] Process 10444 KV load llm_response_cache with 0 records
+2026-06-29 10:41:00,901 - lightrag - INFO - [] Process 10444 doc status load doc_status with 0 records
+2026-06-29 10:41:00,927 - uvicorn.error - INFO - Application startup complete.
+2026-06-29 10:41:00,939 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:9621 (Press CTRL+C to quit)
+2026-06-29 10:42:59,487 - lightrag - INFO - Ollama LLM Options: {}
+2026-06-29 10:42:59,488 - lightrag - INFO - Ollama Embedding Options: {}
+2026-06-29 10:43:00,713 - lightrag - INFO - Embedding config: binding=ollama model=None embedding_dim=1024 max_token_size=8192
+2026-06-29 10:43:00,718 - lightrag - INFO - Send embedding dimension: False by env var (dimensions=1024, has_param=True, binding=ollama)
+2026-06-29 10:43:00,730 - lightrag - INFO - Embedding max_token_size: 8192 (from ollama provider default)
+2026-06-29 10:43:00,743 - lightrag - INFO - Reranking is disabled
+2026-06-29 10:43:02,709 - lightrag - INFO - [] Created new empty graph file: C:\Users\rchdm\Desktop\kb\apps\lightrag\rag_storage\graph_chunk_entity_relation.graphml
+2026-06-29 10:43:02,718 - lightrag - INFO - Role LLM Configuration (initialized):
+2026-06-29 10:43:02,730 - lightrag - INFO -  - extract: ollama/mistral-nemo:latest, host=http://localhost:11434, max_async=4, timeout=240
+2026-06-29 10:43:02,734 - lightrag - INFO -  - keyword: ollama/mistral-nemo:latest, host=http://localhost:11434, max_async=4, timeout=240
+2026-06-29 10:43:02,737 - lightrag - INFO -  - query: ollama/mistral-nemo:latest, host=http://localhost:11434, max_async=4, timeout=240
+2026-06-29 10:43:02,744 - lightrag - INFO -  - vlm: ollama/mistral-nemo:latest, host=http://localhost:11434, max_async=4, timeout=240
+2026-06-29 10:43:02,748 - lightrag - INFO - Role LLM Option:
+2026-06-29 10:43:02,750 - lightrag - INFO -  - extract: Ollama {}
+2026-06-29 10:43:02,760 - lightrag - INFO -  - keyword: Ollama {}
+2026-06-29 10:43:02,773 - lightrag - INFO -  - query: Ollama {}
+2026-06-29 10:43:02,779 - lightrag - INFO -  - vlm: Ollama {}
+2026-06-29 10:43:03,033 - lightrag - INFO - WebUI assets mounted at /webui
+2026-06-29 10:43:03,215 - uvicorn.error - INFO - Started server process [31392]
+2026-06-29 10:43:03,219 - uvicorn.error - INFO - Waiting for application startup.
+2026-06-29 10:43:03,227 - lightrag - INFO - [] Process 31392 KV load full_docs with 0 records
+2026-06-29 10:43:03,232 - lightrag - INFO - [] Process 31392 KV load text_chunks with 0 records
+2026-06-29 10:43:03,233 - lightrag - INFO - [] Process 31392 KV load full_entities with 0 records
+2026-06-29 10:43:03,246 - lightrag - INFO - [] Process 31392 KV load full_relations with 0 records
+2026-06-29 10:43:03,260 - lightrag - INFO - [] Process 31392 KV load entity_chunks with 0 records
+2026-06-29 10:43:03,265 - lightrag - INFO - [] Process 31392 KV load relation_chunks with 0 records
+2026-06-29 10:43:03,272 - lightrag - INFO - [] Process 31392 KV load llm_response_cache with 0 records
+2026-06-29 10:43:03,279 - lightrag - INFO - [] Process 31392 doc status load doc_status with 0 records
+2026-06-29 10:43:03,283 - uvicorn.error - INFO - Application startup complete.
+2026-06-29 10:43:03,290 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:9621 (Press CTRL+C to quit)
+2026-06-29 10:55:14,834 - lightrag - INFO - Ollama LLM Options: {}
+2026-06-29 10:55:14,835 - lightrag - INFO - Ollama Embedding Options: {}
+2026-06-29 10:55:16,684 - lightrag - INFO - Embedding config: binding=ollama model=None embedding_dim=1024 max_token_size=8192
+2026-06-29 10:55:16,694 - lightrag - INFO - Send embedding dimension: False by env var (dimensions=1024, has_param=True, binding=ollama)
+2026-06-29 10:55:16,712 - lightrag - INFO - Embedding max_token_size: 8192 (from ollama provider default)
+2026-06-29 10:55:16,727 - lightrag - INFO - Reranking is disabled
+2026-06-29 11:02:20,943 - lightrag - INFO - Ollama LLM Options: {}
+2026-06-29 11:02:20,943 - lightrag - INFO - Ollama Embedding Options: {}
+2026-06-29 11:02:22,220 - lightrag - INFO - Embedding config: binding=ollama model=None embedding_dim=1024 max_token_size=8192
+2026-06-29 11:02:22,261 - lightrag - INFO - Send embedding dimension: False by env var (dimensions=1024, has_param=True, binding=ollama)
+2026-06-29 11:02:22,299 - lightrag - INFO - Embedding max_token_size: 8192 (from ollama provider default)
+2026-06-29 11:02:22,324 - lightrag - INFO - Reranking is disabled
+2026-06-29 11:18:29,340 - lightrag - INFO - Ollama LLM Options: {}
+2026-06-29 11:18:29,349 - lightrag - INFO - Ollama Embedding Options: {}
+2026-06-29 11:18:31,077 - lightrag - INFO - Embedding config: binding=ollama model=None embedding_dim=1024 max_token_size=8192
+2026-06-29 11:18:31,080 - lightrag - INFO - Send embedding dimension: False by env var (dimensions=1024, has_param=True, binding=ollama)
+2026-06-29 11:18:31,084 - lightrag - INFO - Embedding max_token_size: 8192 (from ollama provider default)
+2026-06-29 11:18:31,087 - lightrag - INFO - Reranking is disabled
+2026-06-29 11:18:34,447 - lightrag - INFO - [] Created new empty graph file: C:\Users\rchdm\Desktop\kb\apps\lightrag\rag_storage\graph_chunk_entity_relation.graphml
+2026-06-29 11:18:34,477 - lightrag - INFO - Role LLM Configuration (initialized):
+2026-06-29 11:18:34,484 - lightrag - INFO -  - extract: ollama/mistral-nemo:latest, host=http://localhost:11434, max_async=4, timeout=240
+2026-06-29 11:18:34,488 - lightrag - INFO -  - keyword: ollama/mistral-nemo:latest, host=http://localhost:11434, max_async=4, timeout=240
+2026-06-29 11:18:34,492 - lightrag - INFO -  - query: ollama/mistral-nemo:latest, host=http://localhost:11434, max_async=4, timeout=240
+2026-06-29 11:18:34,496 - lightrag - INFO -  - vlm: ollama/mistral-nemo:latest, host=http://localhost:11434, max_async=4, timeout=240
+2026-06-29 11:18:34,498 - lightrag - INFO - Role LLM Option:
+2026-06-29 11:18:34,501 - lightrag - INFO -  - extract: Ollama {}
+2026-06-29 11:18:34,505 - lightrag - INFO -  - keyword: Ollama {}
+2026-06-29 11:18:34,507 - lightrag - INFO -  - query: Ollama {}
+2026-06-29 11:18:34,509 - lightrag - INFO -  - vlm: Ollama {}
+2026-06-29 11:18:34,754 - lightrag - INFO - WebUI assets mounted at /webui
+2026-06-29 11:18:34,907 - uvicorn.error - INFO - Started server process [13344]
+2026-06-29 11:18:34,910 - uvicorn.error - INFO - Waiting for application startup.
+2026-06-29 11:18:34,914 - lightrag - INFO - [] Process 13344 KV load full_docs with 0 records
+2026-06-29 11:18:34,915 - lightrag - INFO - [] Process 13344 KV load text_chunks with 0 records
+2026-06-29 11:18:34,916 - lightrag - INFO - [] Process 13344 KV load full_entities with 0 records
+2026-06-29 11:18:34,920 - lightrag - INFO - [] Process 13344 KV load full_relations with 0 records
+2026-06-29 11:18:34,922 - lightrag - INFO - [] Process 13344 KV load entity_chunks with 0 records
+2026-06-29 11:18:34,925 - lightrag - INFO - [] Process 13344 KV load relation_chunks with 0 records
+2026-06-29 11:18:34,927 - lightrag - INFO - [] Process 13344 KV load llm_response_cache with 0 records
+2026-06-29 11:18:34,933 - lightrag - INFO - [] Process 13344 doc status load doc_status with 0 records
+2026-06-29 11:18:34,951 - uvicorn.error - INFO - Application startup complete.
+2026-06-29 11:18:34,957 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:9621 (Press CTRL+C to quit)
+2026-06-29 11:32:51,064 - lightrag - INFO - Ollama LLM Options: {}
+2026-06-29 11:32:51,081 - lightrag - INFO - Ollama Embedding Options: {}
+2026-06-29 11:32:53,214 - lightrag - INFO - Embedding config: binding=ollama model=None embedding_dim=1024 max_token_size=8192
+2026-06-29 11:32:53,215 - lightrag - INFO - Send embedding dimension: False by env var (dimensions=1024, has_param=True, binding=ollama)
+2026-06-29 11:32:53,218 - lightrag - INFO - Embedding max_token_size: 8192 (from ollama provider default)
+2026-06-29 11:32:53,220 - lightrag - INFO - Reranking is disabled
+2026-06-29 11:32:56,227 - lightrag - INFO - [] Created new empty graph file: C:\Users\rchdm\Desktop\kb\apps\lightrag\rag_storage\graph_chunk_entity_relation.graphml
+2026-06-29 11:32:56,255 - lightrag - INFO - Role LLM Configuration (initialized):
+2026-06-29 11:32:56,259 - lightrag - INFO -  - extract: ollama/mistral-nemo:latest, host=http://localhost:11434, max_async=4, timeout=240
+2026-06-29 11:32:56,260 - lightrag - INFO -  - keyword: ollama/mistral-nemo:latest, host=http://localhost:11434, max_async=4, timeout=240
+2026-06-29 11:32:56,264 - lightrag - INFO -  - query: ollama/mistral-nemo:latest, host=http://localhost:11434, max_async=4, timeout=240
+2026-06-29 11:32:56,271 - lightrag - INFO -  - vlm: ollama/mistral-nemo:latest, host=http://localhost:11434, max_async=4, timeout=240
+2026-06-29 11:32:56,279 - lightrag - INFO - Role LLM Option:
+2026-06-29 11:32:56,286 - lightrag - INFO -  - extract: Ollama {}
+2026-06-29 11:32:56,291 - lightrag - INFO -  - keyword: Ollama {}
+2026-06-29 11:32:56,296 - lightrag - INFO -  - query: Ollama {}
+2026-06-29 11:32:56,304 - lightrag - INFO -  - vlm: Ollama {}
+2026-06-29 11:32:56,570 - lightrag - INFO - WebUI assets mounted at /webui
+2026-06-29 11:32:56,834 - uvicorn.error - INFO - Started server process [17956]
+2026-06-29 11:32:56,842 - uvicorn.error - INFO - Waiting for application startup.
+2026-06-29 11:32:56,854 - lightrag - INFO - [] Process 17956 KV load full_docs with 0 records
+2026-06-29 11:32:56,863 - lightrag - INFO - [] Process 17956 KV load text_chunks with 0 records
+2026-06-29 11:32:56,872 - lightrag - INFO - [] Process 17956 KV load full_entities with 0 records
+2026-06-29 11:32:56,881 - lightrag - INFO - [] Process 17956 KV load full_relations with 0 records
+2026-06-29 11:32:56,898 - lightrag - INFO - [] Process 17956 KV load entity_chunks with 0 records
+2026-06-29 11:32:56,904 - lightrag - INFO - [] Process 17956 KV load relation_chunks with 0 records
+2026-06-29 11:32:56,912 - lightrag - INFO - [] Process 17956 KV load llm_response_cache with 0 records
+2026-06-29 11:32:56,931 - lightrag - INFO - [] Process 17956 doc status load doc_status with 0 records
+2026-06-29 11:32:56,945 - uvicorn.error - INFO - Application startup complete.
+2026-06-29 11:32:56,954 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:9621 (Press CTRL+C to quit)
+2026-06-29 11:40:09,249 - uvicorn.error - INFO - Shutting down
+2026-06-29 11:40:09,368 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-06-29 11:40:09,372 - lightrag - INFO - Successfully finalized 12 storages
+2026-06-29 11:40:09,391 - uvicorn.error - INFO - Application shutdown complete.
+2026-06-29 11:40:09,396 - uvicorn.error - INFO - Finished server process [17956]
+2026-06-29 11:44:14,985 - lightrag - INFO - Ollama LLM Options: {}
+2026-06-29 11:44:14,993 - lightrag - INFO - Ollama Embedding Options: {}
+2026-06-29 11:44:16,879 - lightrag - INFO - Embedding config: binding=ollama model=None embedding_dim=1024 max_token_size=8192
+2026-06-29 11:44:16,882 - lightrag - INFO - Send embedding dimension: False by env var (dimensions=1024, has_param=True, binding=ollama)
+2026-06-29 11:44:16,890 - lightrag - INFO - Embedding max_token_size: 8192 (from ollama provider default)
+2026-06-29 11:44:16,895 - lightrag - INFO - Reranking is disabled
+2026-06-29 11:44:24,853 - lightrag - INFO - [] Created new empty graph file: C:\Users\rchdm\Desktop\kb\apps\lightrag\rag_storage\graph_chunk_entity_relation.graphml
+2026-06-29 11:44:24,983 - lightrag - INFO - Role LLM Configuration (initialized):
+2026-06-29 11:44:24,992 - lightrag - INFO -  - extract: ollama/mistral-nemo:latest, host=http://localhost:11434, max_async=4, timeout=240
+2026-06-29 11:44:24,999 - lightrag - INFO -  - keyword: ollama/mistral-nemo:latest, host=http://localhost:11434, max_async=4, timeout=240
+2026-06-29 11:44:25,014 - lightrag - INFO -  - query: ollama/mistral-nemo:latest, host=http://localhost:11434, max_async=4, timeout=240
+2026-06-29 11:44:25,031 - lightrag - INFO -  - vlm: ollama/mistral-nemo:latest, host=http://localhost:11434, max_async=4, timeout=240
+2026-06-29 11:44:25,067 - lightrag - INFO - Role LLM Option:
+2026-06-29 11:44:25,091 - lightrag - INFO -  - extract: Ollama {}
+2026-06-29 11:44:25,098 - lightrag - INFO -  - keyword: Ollama {}
+2026-06-29 11:44:25,106 - lightrag - INFO -  - query: Ollama {}
+2026-06-29 11:44:25,124 - lightrag - INFO -  - vlm: Ollama {}
+2026-06-29 11:44:25,572 - lightrag - INFO - WebUI assets mounted at /webui
+2026-06-29 11:44:26,206 - uvicorn.error - INFO - Started server process [15924]
+2026-06-29 11:44:26,221 - uvicorn.error - INFO - Waiting for application startup.
+2026-06-29 11:44:26,233 - lightrag - INFO - [] Process 15924 KV load full_docs with 0 records
+2026-06-29 11:44:26,245 - lightrag - INFO - [] Process 15924 KV load text_chunks with 0 records
+2026-06-29 11:44:26,257 - lightrag - INFO - [] Process 15924 KV load full_entities with 0 records
+2026-06-29 11:44:26,272 - lightrag - INFO - [] Process 15924 KV load full_relations with 0 records
+2026-06-29 11:44:26,287 - lightrag - INFO - [] Process 15924 KV load entity_chunks with 0 records
+2026-06-29 11:44:26,298 - lightrag - INFO - [] Process 15924 KV load relation_chunks with 0 records
+2026-06-29 11:44:26,305 - lightrag - INFO - [] Process 15924 KV load llm_response_cache with 0 records
+2026-06-29 11:44:26,313 - lightrag - INFO - [] Process 15924 doc status load doc_status with 0 records
+2026-06-29 11:44:26,328 - uvicorn.error - INFO - Application startup complete.
+2026-06-29 11:44:26,345 - uvicorn.error - INFO - Uvicorn running on http://0.0.0.0:9621 (Press CTRL+C to quit)
