@@ -8,36 +8,33 @@ WORKING_DIR = os.environ.get("LIGHTRAG_WORKSPACE", "./rag_workspace")
 if not os.path.exists(WORKING_DIR):
     os.makedirs(WORKING_DIR)
 
-# --- Database Authentication ---
-# If a static password/token is provided (e.g. pasted into .env during local dev), use it.
-# Otherwise, dynamically generate the IAM token using boto3 (e.g. in Production).
-db_password = os.environ.get("POSTGRES_PASSWORD")
+# --- Database Authentication (IAM Auth exclusively) ---
 aws_region = os.environ.get("AWS_REGION", "us-east-1")
 db_host = os.environ.get("POSTGRES_HOST", "kompany.cluster-cml688qeuggm.us-east-1.rds.amazonaws.com")
 db_port = int(os.environ.get("POSTGRES_PORT", 5432))
 db_user = os.environ.get("POSTGRES_USER", "postgres")
 
-if not db_password:
-    try:
-        import logging
-        key_id = os.environ.get("AWS_ACCESS_KEY_ID", "")
-        masked_key = f"{key_id[:5]}...{key_id[-4:]}" if len(key_id) > 8 else "None"
-        logging.info(f"Generating dynamic RDS IAM token using AWS Access Key: {masked_key}")
-        
-        client = boto3.client('rds', region_name=aws_region)
-        auth_token = client.generate_db_auth_token(
-            DBHostname=db_host, 
-            Port=db_port, 
-            DBUsername=db_user, 
-            Region=aws_region
-        )
-        os.environ["POSTGRES_PASSWORD"] = auth_token
-    except Exception as e:
-        import logging
-        logging.error("AWS RDS IAM Token Generation Failed: AWS credentials are expired or missing.")
-        raise RuntimeError(
-            "AWS credentials expired or missing. Please run 'aws sso login' in your terminal."
-        ) from e
+try:
+    import logging
+    key_id = os.environ.get("AWS_ACCESS_KEY_ID", "")
+    masked_key = f"{key_id[:5]}...{key_id[-4:]}" if len(key_id) > 8 else "None"
+    logging.info(f"Generating dynamic RDS IAM token using AWS Access Key: {masked_key}")
+    
+    client = boto3.client('rds', region_name=aws_region)
+    auth_token = client.generate_db_auth_token(
+        DBHostname=db_host, 
+        Port=db_port, 
+        DBUsername=db_user, 
+        Region=aws_region
+    )
+    os.environ["POSTGRES_PASSWORD"] = auth_token
+    logging.info(f"IAM token generated successfully (length: {len(auth_token)} chars)")
+except Exception as e:
+    import logging
+    logging.error(f"AWS RDS IAM Token Generation Failed: {e}")
+    raise RuntimeError(
+        "AWS credentials expired or missing. Please run 'aws sso login' in your terminal."
+    ) from e
 
 # AWS Aurora IAM auth requires SSL
 os.environ["POSTGRES_SSL_MODE"] = "require"

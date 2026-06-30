@@ -37,3 +37,17 @@ yarn-error.log*
 .DS_Store
 *.pem
 .env*
+
+# Python & Virtual Environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+.pytest_cache/
+
+# LightRAG Workspaces & Logs
+**/rag_workspace/
+**/rag_storage/
+*.log
