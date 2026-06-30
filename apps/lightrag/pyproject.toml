@@ -15,4 +15,5 @@ dependencies = [
     "botocore[crt]",
     "ollama>=0.6.2",
     "pgvector>=0.4.2",
+    "psycopg2-binary>=2.9.12",
 ]
